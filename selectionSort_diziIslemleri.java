@@ -1,4 +1,4 @@
-// DERS48- DİZİ ELEMANLARININ YER DEĞİŞTİRİLMESİ
+// DERS48- DİZİ ÖRNEĞİ
 /*bu ornekte diziyi metot çağırarak yazdırma, dizi elemanlarının yerlerini değiştirme,
 selectionsort kullanarak diziyi sıralama çalışması yaptım.
  */
