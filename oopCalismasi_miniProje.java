@@ -1,6 +1,6 @@
 //DERS65 - SORU2
 /*
-SORU2: ogrenci isimli sınıf oluşturun bu sınıfta ogrencinin ıdsi ve
+SORU2: ogrenci isimli sınıf oluşturun bu sınıfta ogrencinin id'si ve
 not degeri tutulmalı. 100 elemanlı bir dizide id ve not degerlerini
 rastgele oluşturarak bu ogrencileri saklayın ve bu ogrencileri aldıkları
 notlara gore artan sırada yazdıran metodu yazın.
