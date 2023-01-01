@@ -7,6 +7,7 @@ toplam para cekme ve yatırma sayısını gosteren bir metot ve iki hesabı para
 gore birbiriyle kıyaslayacak metot bulunmalı.
  */
 
+
 package bolum7_sorular;
 
 public class ders66_soru4 {
@@ -14,7 +15,14 @@ public class ders66_soru4 {
 
         BankaHesap emre = new BankaHesap(123, 500);
         BankaHesap hasan = new BankaHesap(125, 900);
+        BankaHesap ayse = new BankaHesap(186,456);
         BankaHesap.bankaOzetiGoster();
+
+        ayse.paraYatir(1000);
+        emre.paraCek(350);
+        BankaHesap.bankaOzetiGoster();
+
+        ayse.kiyasla(emre);
 
     }
 }
@@ -76,6 +84,7 @@ class BankaHesap{
         if(this.hesapBakiye>= paraMiktari){
         this.hesapBakiye -= paraMiktari;
         operasyonSayisi ++;
+        tumBankaBakiyesi -= paraMiktari;
         } else{
             System.out.println("hesabinizda yeterli bakiye bulunmamaktadir.");
         }
@@ -89,4 +98,19 @@ class BankaHesap{
 
     }
 
+    //son olarak iki hesabı para değişkenine gore birbiriyle kıyaslamamız istenmiş
+    //nesneler soz konusu oldugu için buradaki metot static olmayacak:
+    public void kiyasla(BankaHesap kiyaslanacakHesap){ // parantez içi int sayi1 gibi düsün
+       if(this.getHesapBakiye() < kiyaslanacakHesap.getHesapBakiye()){
+           System.out.println(this.getHesapNo()+ "nolu kisinin parası" +kiyaslanacakHesap.getHesapNo()+
+                   "nolu kisinin parasindan azdir.");
+       }else if(this.getHesapBakiye() > kiyaslanacakHesap.getHesapBakiye()){
+            System.out.println(this.getHesapNo()+ "nolu kisinin parası" +kiyaslanacakHesap.getHesapNo()+
+                    "nolu kisinin parasindan fazladir.");
+        }else{
+           System.out.println(this.getHesapNo()+ "nolu kisinin parası" +kiyaslanacakHesap.getHesapNo()+
+                   "ve nolu kisinin parasi esittir.");
+
+       }
+    }
 }
